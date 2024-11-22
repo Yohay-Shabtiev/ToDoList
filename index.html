@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DO YOUR TASKS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Welcome</h1>
+    </header>
+    <div id="addTask" , class="addTask">
+      <form>
+        <label for="taskString">Enter a task:</label>
+        <input type="text" id="taskString" name="taskString" /><br /><br />
+      </form>
+      <button id="addTaskButton">Add Task</button>
+    </div>
+    <section class="toDoSec">
+      <h3>To Do Tasks</h3>
+      <table id="toDoTable" class="toDoTable">
+        <tr>
+          <td>
+            <!-- the label sync between the label to its input element -->
+            <label for="ch">A task</label>
+          </td>
+          <td>
+            <input type="checkbox" id="ch" value="Mark as done" />
+          </td>
+        </tr>
+        <tr>
+          <td>So many tasks</td>
+          <td>
+            <input type="checkbox" />
+          </td>
+        </tr>
+      </table>
+      <h3>Completed Tasks</h3>
+      <table id="doneTable" class="doneTable">
+        <tr>
+          <td>Some are done</td>
+        </tr>
+        <tr>
+          <td>Congrats</td>
+        </tr>
+      </table>
+      <button id="loadMoreCompletedTasks" hidden="true">Load more</button>
+    </section>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
+
+<!-- 
+<script>
+  function TaskManager() {
+    this.toDoTable = document.getElementById("toDoTable");
+    this.doneTable = document.getElementById("doneTable");
+    this.taskInput = document.getElementById("taskInput");
+    this.addTaskButton = document.getElementById("addTaskButton");
+  }
+
+  // Method to initialize event listeners
+  TaskManager.prototype.init = function () {
+    this.addTaskButton.addEventListener("click", this.addTask.bind(this));
+
+    // Add event listeners to existing checkboxes in the toDoTable
+    const existingCheckboxes = this.toDoTable.querySelectorAll("input[type='checkbox']");
+    existingCheckboxes.forEach((checkbox) => {
+      checkbox.addEventListener("change", this.handleCheckboxChange.bind(this));
+    });
+  };
+
+  // Method to add a new task
+  TaskManager.prototype.addTask = function () {
+    const taskText = this.taskInput.value.trim();
+
+    if (taskText === "") {
+      alert("Please enter a task!");
+      return;
+    }
+
+    const newRow = document.createElement("tr");
+    const taskCell = document.createElement("td");
+    const checkboxCell = document.createElement("td");
+
+    taskCell.textContent = taskText;
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.addEventListener("change", this.handleCheckboxChange.bind(this));
+
+    checkboxCell.appendChild(checkbox);
+    newRow.appendChild(taskCell);
+    newRow.appendChild(checkboxCell);
+
+    this.toDoTable.appendChild(newRow);
+    this.taskInput.value = "";
+  };
+
+  // Method to handle checkbox change (move row to doneTable)
+  TaskManager.prototype.handleCheckboxChange = function (event) {
+    const checkbox = event.target;
+    const row = checkbox.closest("tr");
+
+    // Remove the checkbox cell
+    row.removeChild(row.lastChild);
+
+    // Append the row to the doneTable
+    this.doneTable.appendChild(row);
+  };
+
+  // Initialize the TaskManager when the DOM is loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    const taskManager = new TaskManager();
+    taskManager.init();
+  });
+</script> -->

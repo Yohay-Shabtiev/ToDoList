@@ -1,0 +1,35 @@
+html {
+  box-sizing: border-box;
+}
+body {
+  background-color: rosybrown;
+}
+
+table {
+  width: 100%;
+  border: 2px solid gray;
+}
+
+.toDoSec {
+  margin-inline-start: 10px;
+  h3 {
+    margin-inline: 0 0 0 5px;
+  }
+}
+
+.toDoTable {
+  margin-bottom: 10px;
+  tr {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* padding: 100px; */
+}
+/* .doneTable {
+  width: 100%;
+  padding: 100px;
+} */
+
+.addTask {
+  margin: 10px;
+}
