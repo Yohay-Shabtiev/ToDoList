@@ -7,6 +7,9 @@ let x = 5;
 
 document.getElementById("addTaskButton").addEventListener("click", () => {
   console.log(x);
+  console.log(x);
+  console.log(x);
+  console.log(x);
   const taskString = document.getElementById("taskString").value;
   if (taskString.trim() === "") {
     // trimming the spaces
