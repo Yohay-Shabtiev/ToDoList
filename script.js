@@ -4,6 +4,8 @@ let tasksCounter = 0;
 let todoArray = [];
 let doneArray = [];
 
+//fsasa
+
 document.getElementById("addTaskButton").addEventListener("click", () => {
   const taskString = document.getElementById("taskString").value;
   if (taskString.trim() === "") {
