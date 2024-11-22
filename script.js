@@ -1,5 +1,6 @@
 import { Task } from "./Task.js";
 
+let tasksCounter = 0;
 let todoArray = [];
 let doneArray = [];
 
@@ -28,8 +29,8 @@ document.getElementById("addTaskButton").addEventListener("click", () => {
   checkboxCell.setAttribute("id", uniqueID);
   checkboxCell.addEventListener("change", (evnet) => {
     if (evnet.target.checked) {
-      task.markAsComplete();
-      doneArray.push(todoArray.pop(task));
+      // task.markAsComplete();
+      // doneArray.push(todoArray.pop(task));
       const checkedRow = evnet.target.closest("tr");
       checkedRow.removeChild(newCheckBoxCell);
       toDoTable.removeChild(checkedRow);
