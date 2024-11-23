@@ -12,6 +12,14 @@ document.getElementById("addTaskButton").addEventListener("click", () => {
     return;
   }
   const task = new Task(tasksCounter++, taskString);
+  addTask(todoArray, task);
+
+  document.getElementById("taskString").value = "";
+});
+
+// add a button once the donetable is greater the 8
+
+function addTask(todoArray, task) {
   todoArray.push(task);
 
   const toDoTable = document.getElementById("toDoTable");
@@ -29,17 +37,21 @@ document.getElementById("addTaskButton").addEventListener("click", () => {
   checkboxCell.setAttribute("id", uniqueID);
   checkboxCell.addEventListener("change", (evnet) => {
     if (evnet.target.checked) {
-      // task.markAsComplete();
-      // doneArray.push(todoArray.pop(task));
+      task.markAsComplete();
+      doneArray.push(todoArray.pop(task));
       const checkedRow = evnet.target.closest("tr");
       checkedRow.removeChild(newCheckBoxCell);
       toDoTable.removeChild(checkedRow);
       doneTable.appendChild(checkedRow);
-      if (doneArray.length > 8) {
+      console.log(doneArray.length);
+      if (doneArray.length > 2) {
+        const loadMoreButton = document.getElementById(
+          "loadMoreCompletedTasks"
+        );
+        loadMoreButton.style.display = "block";
       }
     }
   });
-
   // newStringCell.textContent = taskString;
   newLabelCell.appendChild(checkboxCell);
   newCheckBoxCell.appendChild(checkboxCell);
@@ -48,8 +60,4 @@ document.getElementById("addTaskButton").addEventListener("click", () => {
   newRow.appendChild(newLabel);
   newRow.appendChild(newCheckBoxCell);
   toDoTable.appendChild(newRow);
-
-  document.getElementById("taskString").value = "";
-});
-
-// add a button once the donetable is greater the 8
+}

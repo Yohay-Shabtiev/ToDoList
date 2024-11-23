@@ -33,3 +33,8 @@ table {
 .addTask {
   margin: 10px;
 }
+
+.loadMoreCompletedTasks {
+  margin: 10px;
+  display: none;
+}

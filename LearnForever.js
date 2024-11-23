@@ -63,3 +63,5 @@ console.log(Employee.getCompanyName()); // Static public method
 // This would cause errors:
 // console.log(employee1.#salary); // Cannot access private field
 // console.log(Employee.#companyName); // Cannot access private static field
+
+// conflicts are happenning when 2 different branches changed and commit the same line
