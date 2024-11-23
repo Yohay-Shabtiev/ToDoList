@@ -3,14 +3,8 @@ import { Task } from "./Task.js";
 let tasksCounter = 0;
 let todoArray = [];
 let doneArray = [];
-let x = 5;
-let y = 6;
 
 document.getElementById("addTaskButton").addEventListener("click", () => {
-  console.log(x);
-  console.log(y * x);
-  console.log(x);
-  console.log(x);
   const taskString = document.getElementById("taskString").value;
   if (taskString.trim() === "") {
     // trimming the spaces
