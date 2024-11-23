@@ -8,7 +8,7 @@ let y = 6;
 
 document.getElementById("addTaskButton").addEventListener("click", () => {
   console.log(x);
-  console.log(y);
+  console.log(y * x);
   console.log(x);
   console.log(x);
   const taskString = document.getElementById("taskString").value;
