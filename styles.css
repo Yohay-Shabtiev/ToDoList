@@ -8,32 +8,72 @@ body {
 table {
   width: 100%;
   border: 2px solid gray;
+  height: 200px;
 }
 
-.toDoSec {
-  margin-inline-start: 10px;
-  h3 {
-    margin-inline: 0 0 0 5px;
-  }
+.addTask{
+  display: flex;
+  justify-content: space-between;
+  /* margin: px; */
 }
 
+.taskString{
+  padding: 3px;
+  margin: 1px 2px;
+  height: 20px;
+}
+.infoString{
+  width: 500px;
+  padding: 3px;
+  margin: 1px 2px;
+  height: 20px;
+}
 .toDoTable {
-  margin-bottom: 10px;
-  tr {
-    display: flex;
-    justify-content: space-between;
+
+  thead{
+    background-color: beige; 
+    th{
+      width: 50%;
+    }
+    
+    .task{
+      /* padding: 0 10px;   */
+      /* background-color: #b22222; */
+      /* width: 45%; */
+    }
+     
+    .info{
+      /* padding: 0 10px; */
+      /* background-color: aquamarine; */
+      /* width: 40%; */
+    }
+    
+    /* text-align: center; */
+    
+   
+    
   }
-  /* padding: 100px; */
+  
+
 }
-/* .doneTable {
-  width: 100%;
-  padding: 100px;
+
+.task{
+  /* background-color: rgb(220, 197, 197); */
+  /* width: 45%; */
+}
+.info{
+  width: 45%;
+
+}
+/* tr {
+  /* display: flex; */
+/* justify-content: space-between; */
+
+/* td {
+  display: flex;
+  align-items: center;
 } */
-
-.addTask {
-  margin: 10px;
-}
-
+/* 
 .loadMoreCompletedTasks {
   margin: 10px;
   display: none;

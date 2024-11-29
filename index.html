@@ -12,48 +12,81 @@
     </header>
     <div id="addTask" , class="addTask">
       <form>
-        <label for="taskString">Enter a task:</label>
-        <input type="text" id="taskString" name="taskString" /><br /><br />
+        <input
+          type="text"
+          placeholder="Enter a task"
+          id="taskString"
+          class="taskString"
+        /><br />
+        <input
+          type="text"
+          id="infoString"
+          class="infoString"
+          placeholder="Add info (optional)"
+        /><br />
       </form>
       <button id="addTaskButton">Add Task</button>
     </div>
     <section class="toDoSec">
-      <h3>To Do Tasks</h3>
       <table id="toDoTable" class="toDoTable">
-        <!-- <tr>
-          <td>
-            the label sync between the label to its input element
-            <label for="ch">A task</label>
-          </td>
-          <td>
-            <input type="checkbox" id="ch" value="Mark as done" />
-          </td>
-        </tr>
-        <tr>
-          <td>So many tasks</td>
-          <td>
-            <input type="checkbox" />
-          </td>
-        </tr> -->
+        <h3>To Do Tasks</h3>
+
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Additional Information</th>
+            <th>
+              <input type="checkbox" name="" id="" style="display: none" />
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="task">Task</td>
+            <td class="info">Additional Information</td>
+            <td>
+              <input type="checkbox" name="" id="" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Task</td>
+            <td>Additional Information</td>
+            <td>
+              <input type="checkbox" name="" id="" />
+            </td>
+          </tr>
+          <tr>
+            <td>Task</td>
+            <td>Additional Information</td>
+            <td>
+              <input type="checkbox" name="" id="" />
+            </td>
+          </tr>
+        </tbody>
       </table>
-      <h3>Completed Tasks</h3>
-      <table id="doneTable" class="doneTable">
-        <tr>
-          <td>Some are done</td>
-        </tr>
-        <tr>
-          <td>Congrats</td>
-        </tr>
-      </table>
-      <button id="loadMoreCompletedTasks" class="loadMoreCompletedTasks">
-        Load more
-      </button>
     </section>
     <script type="module" src="./script.js"></script>
   </body>
 </html>
 
 <!-- 
+  <h3>Completed Tasks</h3>
+  <table id="doneTable" class="doneTable">
+    <tbody>
+      <tr>
+        <td>Some are done</td>
+      </tr>
+      <tr>
+        <td>Congrats</td>
+      </tr>
+    </tbody>
+  </table>
+  <button id="loadMoreCompletedTasks" class="loadMoreCompletedTasks">
+    Load more
+  </button>
+
+  <!-- 
 <script>
   function TaskManager() {
     this.toDoTable = document.getElementById("toDoTable");

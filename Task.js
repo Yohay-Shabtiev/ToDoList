@@ -2,9 +2,10 @@ export class Task {
   static #openTasks = 0;
   static #completedTasks = 0;
 
-  constructor(text, id = Date.now(), done = false, completeTime = null) {
+  constructor(text, info, done = false, completeTime = null) {
     this.text = text;
-    this.id = id;
+    this.info = info;
+    this.id = Date.now();
   }
 
   static getOpenTasks() {

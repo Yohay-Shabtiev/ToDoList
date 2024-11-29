@@ -1,0 +1,32 @@
+.toDoSec {
+  margin-inline-start: 10px;
+  h3 {
+    margin-inline: 40 0 0 51px;
+  }
+}
+
+.toDoTable {
+  thead {
+    tr {
+      display: flex;
+    }
+    /* height: auto; */
+    /* td {
+      width: 0%;
+    } */
+  }
+  margin-bottom: 10px;
+  /* tr {
+    display: flex; 
+  } */
+
+  /* padding: 100px; */
+}
+/* .doneTable {
+  width: 100%;
+  padding: 100px;
+} */
+
+.addTask {
+  margin: 10px;
+}
